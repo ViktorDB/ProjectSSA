@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ProjectSSA.ViewModels.BandsVM>
+
+@{
+    ViewBag.Title = "Bands";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<article>
+    <table>
+        @foreach (var item in Model) 
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Picture)
+                </td>
+                <td>
+                    @Html.ActionLink("Home", "Details", new { id=item.ID })
+                </td>
+@*                <td>
+                    @Html.ActionLink("Product", "Details", new { id=item.ProductID })
+                </td>*@
+            </tr>
+        }
+    </table>
+</article>
+
+@*<aside>
+    <h3>Aside Title</h3>
+    <p>
+        Use this area to provide additional information.
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>
+</aside>*@

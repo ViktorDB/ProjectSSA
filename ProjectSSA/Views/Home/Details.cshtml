@@ -1,0 +1,58 @@
+﻿@model ProjectSSA.ViewModels.BandDetailsVM
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>BandDetailsVM</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Picture)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Picture)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Twitter)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Twitter)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Facebook)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Facebook)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Genres)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Genres)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
