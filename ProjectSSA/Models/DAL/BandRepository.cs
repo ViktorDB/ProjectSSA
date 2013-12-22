@@ -29,6 +29,7 @@ namespace ProjectSSA.Models.DAL
 
                 bands.Add(b);
             }
+            reader.Close();
 
             return (bands);
         }
@@ -53,6 +54,7 @@ namespace ProjectSSA.Models.DAL
 
                 //bands.Add(b);
             }
+            reader.Close();
 
             return (b);
         }

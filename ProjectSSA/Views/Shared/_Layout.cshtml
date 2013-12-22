@@ -23,11 +23,16 @@
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
                             <li>@Html.ActionLink("Bands", "Bands", "Home")</li>
                             <li>@Html.ActionLink("LineUp", "LineUp", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                             @if(Request.IsAuthenticated)
                             {
-                              <li> @Html.ActionLink("Tickets", "Tickets", "Home")</li>
+                                <li> @Html.ActionLink("Tickets", "Tickets", "Home")</li>
                             }
+                            @if (HttpContext.Current.User.IsInRole("Admin"))
+                            { 
+                                <li> @Html.ActionLink("Overzicht", "Overzicht", "Home")</li>
+                            }
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
                         </ul>
                     </nav>
                 </div>

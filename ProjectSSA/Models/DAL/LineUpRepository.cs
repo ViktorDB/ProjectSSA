@@ -33,6 +33,7 @@ namespace ProjectSSA.Models.DAL
 
                 lineups.Add(l);
             }
+            reader.Close();
 
             return (lineups);
         }
@@ -52,6 +53,7 @@ namespace ProjectSSA.Models.DAL
 
                 lineups.Add(l);
             }
+            reader.Close();
 
             return (lineups);
         }
@@ -80,6 +82,7 @@ namespace ProjectSSA.Models.DAL
 
                 lineups.Add(l);
             }
+            reader.Close();
 
             return (lineups);
         }

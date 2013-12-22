@@ -58,9 +58,8 @@ namespace ProjectSSA.Controllers
 
         public ActionResult LineUp(string SelectedDate)
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "De Line Up.";
 
-            //var ViewModel = new List<LineUpVM>();
             var ViewModel = new LineUpVM();
 
             ViewModel.Dates = LineUpRepository.GetAllDays();
@@ -73,22 +72,31 @@ namespace ProjectSSA.Controllers
 
                 ViewModel.LineUps = LineUpRepository.GetLineUpsByDay(DTSelectedDate1);
                 ViewModel.SelectedDate = SelectedDate;
-
-                //foreach (LineUp lineup in daylineups)
-                //{
-                //    ViewModel.
-                //    ViewModelList.Add(new LineUpVM
-                //    {
-                //        Date = lineup.Date,
-                //        Band = lineup.Band,
-                //        Stage = lineup.Stage
-                //    });
-                //}
-
             }
 
             return View(ViewModel);
 
+        }
+
+        public ActionResult Overzicht()
+        {
+            ViewBag.Message = "Een overzicht van gereserveerde tickets.";
+
+            var ViewModel = new OverzichtVM();
+            ViewModel.Tickets = TicketRepository.GetTickets();
+            ViewModel.AvailableTickets = TicketRepository.GetAvailableTickets();
+
+            return View(ViewModel);
+        }
+
+        public ActionResult Tickets()
+        {
+            ViewBag.Message = "Reserveer je tickets.";
+
+            var ViewModel = new ReserveerTicketsVM();
+            
+
+            return View(ViewModel);
         }
 
         public ActionResult Contact()
