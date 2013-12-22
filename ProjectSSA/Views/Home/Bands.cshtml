@@ -18,10 +18,11 @@
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Picture)
+                    <img src="@Url.Content("~/" + @item.Picture)" alt="IMAGES" width="100" height="100"/>
+                    @*@Html.DisplayFor(modelItem => item.Picture)*@
                 </td>
                 <td>
-                    @Html.ActionLink("Home", "Details", new { id=item.ID })
+                    @Html.ActionLink("Details", "Details", new { id=item.ID })
                 </td>
 @*                <td>
                     @Html.ActionLink("Product", "Details", new { id=item.ProductID })

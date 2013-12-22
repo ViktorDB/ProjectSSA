@@ -56,6 +56,41 @@ namespace ProjectSSA.Controllers
             return View(ViewModel);
         }
 
+        public ActionResult LineUp(string SelectedDate)
+        {
+            ViewBag.Message = "Your contact page.";
+
+            //var ViewModel = new List<LineUpVM>();
+            var ViewModel = new LineUpVM();
+
+            ViewModel.Dates = LineUpRepository.GetAllDays();
+
+            if (SelectedDate != null)
+            {
+                
+                DateTime DTSelectedDate = Convert.ToDateTime(SelectedDate);
+                string DTSelectedDate1 = DTSelectedDate.ToString("yyyy-MM-dd");
+
+                ViewModel.LineUps = LineUpRepository.GetLineUpsByDay(DTSelectedDate1);
+                ViewModel.SelectedDate = SelectedDate;
+
+                //foreach (LineUp lineup in daylineups)
+                //{
+                //    ViewModel.
+                //    ViewModelList.Add(new LineUpVM
+                //    {
+                //        Date = lineup.Date,
+                //        Band = lineup.Band,
+                //        Stage = lineup.Stage
+                //    });
+                //}
+
+            }
+
+            return View(ViewModel);
+
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
