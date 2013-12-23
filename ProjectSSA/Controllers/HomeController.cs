@@ -94,9 +94,30 @@ namespace ProjectSSA.Controllers
             ViewBag.Message = "Reserveer je tickets.";
 
             var ViewModel = new ReserveerTicketsVM();
+            ViewModel.TicketTypeCombo = TicketRepository.GetTicketTypes();
             
+            return View(ViewModel);
+        }
+
+        public ActionResult ConfirmReservation(Ticket ticket)
+        {
+            string ticketnaam =  TicketRepository.GetTicketName(ticket.ID);
+            var ViewModel = new ReserveerTicketsVM();
+            ViewModel.TicketName = ticketnaam;
+            ViewModel.Ticketholder = ticket.Ticketholder;
+            ViewModel.TicketholderEmail = ticket.TicketholderEmail;
+            ViewModel.ID = ticket.ID;
+            ViewModel.Amount = ticket.Amount;
 
             return View(ViewModel);
+        }
+
+        public ActionResult ConfirmReservationOK(Ticket ticket)
+        {
+            TicketRepository.ReserveerTicket(ticket);
+
+
+            return View();
         }
 
         public ActionResult Contact()

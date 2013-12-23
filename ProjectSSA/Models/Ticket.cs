@@ -7,6 +7,7 @@ namespace ProjectSSA.Models
 {
     public class Ticket
     {
+        public int ID { get; set; }
         public string Ticketholder { get; set; }
         public string TicketholderEmail { get; set; }
         public string TicketName { get; set; }
