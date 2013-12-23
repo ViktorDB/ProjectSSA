@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ConfirmReservation</h2>
+<h2>Bevestig je bestelling.</h2>
 
 @using (Html.BeginForm("ConfirmReservationOK", "Home"))
 {
@@ -18,7 +18,7 @@
         <div class="editor-label">
             @Html.LabelFor(model => model.Ticketholder)
         </div>
-        <div class="editor-field">
+        <div class="editor-field Grade">
             @Html.TextBoxFor(model => model.Ticketholder,new{@readonly="readonly"})
             @Html.ValidationMessageFor(model => model.Ticketholder)
         </div>
@@ -26,23 +26,18 @@
         <div class="editor-label">
             @Html.LabelFor(model => model.TicketholderEmail)
         </div>
-        <div class="editor-field">
+        <div class="editor-field Grade">
             @Html.TextBoxFor(model => model.TicketholderEmail,new{@readonly="readonly"})
             @Html.ValidationMessageFor(model => model.TicketholderEmail)
         </div>
-
         <div class="editor-label">
             @Html.LabelFor(model => model.TicketName)
         </div>
-        <div class="editor-field">
+        <div class="editor-field Grade">
             @Html.TextBoxFor(model => model.TicketName,new{@readonly="readonly"})
             @Html.ValidationMessageFor(model => model.TicketName)
         </div>
-
-@*        <div class="editor-label">
-            @Html.LabelFor(model => model.TicketType)
-        </div>*@
-        <div class="editor-field">
+        <div class="editor-field Grade">
             @Html.TextBoxFor(model => model.ID, new { style = "display:none;" })
             @Html.ValidationMessageFor(model => model.ID)
         </div>
@@ -50,20 +45,21 @@
         <div class="editor-label">
             @Html.LabelFor(model => model.Amount)
         </div>
-        <div class="editor-field">
+        <div class="editor-field Grade">
             @Html.TextBoxFor(model => model.Amount,new{@readonly="readonly"})
             @Html.ValidationMessageFor(model => model.Amount)
         </div>
-
+        <div class="BackToTickets">
+    @Html.ActionLink("Terug", "Tickets")
+</div>
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Bevestig" />
         </p>
     </fieldset>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

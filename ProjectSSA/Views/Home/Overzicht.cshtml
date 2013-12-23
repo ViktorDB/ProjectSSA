@@ -5,19 +5,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Overzicht</h2>
+<h2>Overzicht verkochte tickets</h2>
 
-<h3>Overzicht per tickettype</h3>
+<div class="OverzichtTitel"><h3>per tickettype</h3></div>
+
 <table>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.TicketName)
+            Ticket Type
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Price)
+            Prijs
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AvailableTickets)
+            Resterende Tickets
         </th>
     </tr>
 
@@ -27,7 +28,7 @@
             @Html.DisplayFor(modelItem => item.TicketName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Price)
+            €@Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.AvailableTickets)
@@ -37,22 +38,22 @@
 
 </table>
 
+<div class="OverzichtTitel"><h3>volledig</h3></div>
 
-<h3>Overzicht volledig lijst</h3>
 
 <table>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Ticketholder)
+            Naam
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TicketholderEmail)
+            E-mail
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TicketName)
+            Ticket Type
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Amount)
+            Aantal
         </th>
         <th></th>
     </tr>

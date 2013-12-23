@@ -5,46 +5,46 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<div class="BackToBands">
+    @Html.ActionLink("Back to bands", "Bands")
+</div>
+
+<h2>@Html.DisplayFor(model => model.Name)</h2>
+
 
 <fieldset>
     <legend>BandDetailsVM</legend>
 
-    <div class="display-label">
+@*    <div class="display-label">
          @Html.DisplayNameFor(model => model.Name)
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Name)
-    </div>
+    </div>*@
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Picture)
-    </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Picture)
+        <img src="@Url.Content("~/" + @Html.DisplayFor(model => model.Picture))" alt="IMAGES" width="150" height="150"/>
     </div>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Description)
+    <div class="display-label DetailBlok">
+        <div> @Html.DisplayNameFor(model => model.Description)</div>
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Description)
     </div>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Twitter)
+    <div class="display-label DetailBlok">
+         <div>@Html.DisplayNameFor(model => model.Twitter)</div>
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Twitter)
     </div>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Facebook)
+    <div class="display-label DetailBlok">
+         <div>@Html.DisplayNameFor(model => model.Facebook)</div>
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Facebook)
     </div>
 </fieldset>
-<p>
-    @Html.ActionLink("Back to bands", "Bands")
-</p>
+

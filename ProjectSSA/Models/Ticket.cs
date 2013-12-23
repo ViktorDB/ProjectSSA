@@ -13,6 +13,6 @@ namespace ProjectSSA.Models
         public string TicketName { get; set; }
         public string Price { get; set; }
         public string AvailableTickets { get; set; }
-        public string Amount { get; set; }
+        public int Amount { get; set; }
     }
 }

@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Tickets</h2>
+<h2>Tickets bestellen</h2>
 
 @using (Html.BeginForm("ConfirmReservation","Home")) {
     @Html.AntiForgeryToken()
@@ -34,13 +34,11 @@
             @Html.LabelFor(model => model.TicketType)
         </div>
         <div class="editor-field">
-@*            @Html.EditorFor(model => model.TicketType)
-            @Html.ValidationMessageFor(model => model.TicketType)*@
             
-            <select name="id">
+            <select id="SelectType" name="id">
                 @foreach(var item in Model.TicketTypeCombo)
                 {
-                    <option value="@item.ID">@item.Name - @item.Price</option>
+                    <option value="@item.ID">@item.Name - €@item.Price</option>
                 }
             </select>
         </div>
@@ -59,9 +57,6 @@
     </fieldset>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

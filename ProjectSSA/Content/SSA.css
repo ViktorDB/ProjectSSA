@@ -1,0 +1,178 @@
+﻿/*Bands*/
+
+body {
+
+}
+
+#articleBand {
+    width:960px;
+}
+
+.BandBlok {
+    width:150px;
+    height: auto;
+    float:left;
+    margin: 5px;
+}
+
+.BandBlokName {
+    width:150px;
+    height: 30px;
+    text-align: center;
+    background-color:#009099;
+    color: white;
+    line-height: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.BandBlokName > a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.BandBlokName:hover{
+    background-color: #c7d1d6;
+}
+
+.BandBlokImage {
+    width:150px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.BandBlokDetails {
+    width:150px;
+    height: 20px;
+    text-align: center;
+    background-color:grey;
+    color: white;
+}
+
+/*Band Details*/
+
+/*.DetailBlok {
+    width:200px;
+    height: 30px;
+    line-height: 30px;
+    background-color: grey;
+    color: white;
+}*/
+
+.DetailBlok div {
+    padding-top:10px;
+    font-weight: bold;
+}
+
+.BackToBands {
+    background-color:#009099;
+    width: 100px;
+
+    color: white;
+    margin-top: 20px;
+}
+
+.BackToBands:hover{
+    background-color: #c7d1d6;
+}
+
+.BackToBands a{
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+}
+
+/*Line Up*/
+
+.LineUpDate {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 50px;
+    margin-right: 20px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #009099;
+    float: left;
+}
+
+.LineUpDate a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*overzicht*/
+
+.OverzichtTitel {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 30px;
+    margin-right: 20px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #009099;
+}
+
+.OverzichtTitel h3 {
+    color: white;
+}
+
+/*tickets*/
+
+#SelectType {
+    width: 310px;
+    height: 35px;
+    margin-top: 7px;
+}
+
+.Grade {
+    opacity: 0.5;
+}
+
+.BackToTickets {
+    margin-bottom: 10px;
+    width: 85px;
+    height: 32px;
+    color: grey;
+    margin-top: 20px;
+    background-color: #d3dce0;
+    border: 1px solid #787878;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.BackToTickets:hover{
+    background-color: #c7d1d6;
+}
+
+.BackToTickets a{
+    text-align: center;
+    color: black;
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+}
+
+#RSSFEED {
+        margin-top: 20px;
+    margin-bottom: 20px;
+    width: auto;
+    height: 50px;
+    margin-right: 20px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #009099;
+}
+
+#RSSFEED a {
+        display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}

@@ -14,8 +14,14 @@ namespace ProjectSSA.Controllers
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+            FestivalVM viewmodel = new FestivalVM();
+            var festivalinfo = FestivalRepository.GetFestival();
+            viewmodel.Name = festivalinfo.Name;
+            viewmodel.Place = festivalinfo.Place;
+            viewmodel.StartDate = festivalinfo.StartDate;
+            viewmodel.EndDate = festivalinfo.EndDate;
 
-            return View();
+            return View(viewmodel);
         }
 
         public ActionResult Bands()
@@ -115,7 +121,10 @@ namespace ProjectSSA.Controllers
         public ActionResult ConfirmReservationOK(Ticket ticket)
         {
             TicketRepository.ReserveerTicket(ticket);
+            TicketType tickettype = TicketRepository.GetTicketTypeByID(ticket.ID);
+            int over = tickettype.AvailableTickets - ticket.Amount;
 
+            TicketRepository.EditAvailableTickets(over, ticket.ID);
 
             return View();
         }

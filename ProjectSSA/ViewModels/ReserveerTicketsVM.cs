@@ -12,7 +12,7 @@ namespace ProjectSSA.ViewModels
         public string Ticketholder { get; set; }
         public string TicketholderEmail { get; set; }
         public int TicketType { get; set; }
-        public string Amount { get; set; }
+        public int Amount { get; set; }
         public string TicketName { get; set; }
         public List<TicketType> TicketTypeCombo { get; set; }
         public Ticket Tickets { get; set; }
