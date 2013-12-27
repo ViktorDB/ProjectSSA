@@ -275,9 +275,26 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\bands\brunomars.jpg" />
+    <Content Include="Images\bands\daftpunk.png" />
     <Content Include="Images\bands\davidguetta.jpeg" />
+    <Content Include="Images\bands\drake.jpeg" />
     <Content Include="Images\bands\eminem.jpg" />
+    <Content Include="Images\bands\jayz.jpeg" />
+    <Content Include="Images\bands\justintimberlake.jpeg" />
+    <Content Include="Images\bands\kendricklamar.jpg" />
+    <Content Include="Images\bands\ladygaga.jpeg" />
+    <Content Include="Images\bands\lilwayne.jpeg" />
+    <Content Include="Images\bands\lilwayne.jpg" />
+    <Content Include="Images\bands\macklemore.jpeg" />
     <Content Include="Images\bands\no_image.gif" />
+    <Content Include="Images\bands\psy.jpg" />
+    <Content Include="Images\bands\rickross.jpeg" />
+    <Content Include="Images\bands\rihanna.jpeg" />
+    <Content Include="Images\bands\shm.jpg" />
+    <Content Include="Images\bands\taylorswift.png" />
+    <Content Include="Images\bands\U2.jpeg" />
+    <Content Include="Images\bands\william.jpg" />
     <Content Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

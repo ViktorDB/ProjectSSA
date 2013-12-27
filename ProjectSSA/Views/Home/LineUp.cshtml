@@ -9,7 +9,7 @@
 
 
 
-@foreach (var item in Model.Dates) {
+@*@foreach (var item in Model.Dates) {
     <div class="LineUpDate">
         @Html.ActionLink(@item.Date, "LineUp", new {SelectedDate = item.Date})
     </div>
@@ -32,4 +32,32 @@
     }
 }
 
-</table>
+</table>*@
+
+@foreach (var item in Model.Dates) {
+    <div class="LineUpDate">
+        @Html.ActionLink(@item.Date, "LineUp", new {SelectedDate = item.Date})
+    </div>
+}
+<div style="clear:both"></div>
+
+    @if(Model.SelectedDate != null)
+    {
+    foreach (var item in Model.LineUps) {
+
+        <div class="LineUpBlok">
+            <div class="LineUpBlokLinks">
+                <div class="LineUpBlokBand">@Html.DisplayFor(modelItem => item.Band)</div>
+                <div class="LineUpBlokStage">@Html.DisplayFor(modelItem => item.Stage)</div>
+            </div>
+            <div class="LineUpBlokRechts">
+                <div class="LineUpBlokUntil">@Html.DisplayFor(modelItem => item.Until)</div>
+                <div class="LineUpBlokStreep">-</div>
+                <div class="LineUpBlokFrom">@Html.DisplayFor(modelItem => item.From)</div>
+            </div>
+        </div>
+    }
+}
+
+
+

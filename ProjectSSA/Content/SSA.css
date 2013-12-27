@@ -66,6 +66,10 @@ body {
     font-weight: bold;
 }
 
+.detailfoto {
+    margin-top: 10px;
+}
+
 .BackToBands {
     background-color:#009099;
     width: 100px;
@@ -106,9 +110,64 @@ body {
     font-weight: bold;
 }
 
+.LineUpBlok {
+    background-color: #e2e2e2;
+    margin-bottom: 10px;
+    padding: 15px;
+    height: 50px;
+}
+
+.LineUpBlokLinks {
+    float: left;
+    height: 50px;
+}
+
+.LineUpBlokRechts {
+    padding-top: 5px;
+    padding-right: 20px;
+    float: right;
+    width: 300px;
+    height: 50px;
+}
+
+.LineUpBlokBand {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.LineUpBlokStage {
+    font-style: italic;
+    font-size: 15px;
+
+}
+
+.LineUpBlokFrom {
+    float: right;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px;
+}
+.LineUpBlokUntil {
+    float: right;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+       padding: 2px;
+}
+
+.LineUpBlokStreep {
+    float: right;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+       padding: 2px;
+}
+
 /*overzicht*/
 
-.OverzichtTitel {
+/*.OverzichtTitel {
     margin-top: 20px;
     margin-bottom: 20px;
     width: 150px;
@@ -117,10 +176,30 @@ body {
     line-height: 30px;
     text-align: center;
     background-color: #009099;
+}*/
+
+/*.OverzichtTitel h3 {
+    color: white;
+}*/
+
+.tabeloverzicht th, td{
+    padding: 8px;
+    border: 1px solid #787878;
 }
 
-.OverzichtTitel h3 {
+.tabeloverzicht th{
     color: white;
+}
+
+.tabeloverzicht th{
+    background-color: #009099;    
+}
+
+.tabeloverzicht tr:nth-child(odd) td{
+    background-color:white;
+}
+.tabeloverzicht tr:nth-child(even) td{
+    background-color:#e2e2e2
 }
 
 /*tickets*/
